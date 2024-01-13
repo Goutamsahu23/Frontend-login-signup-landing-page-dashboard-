@@ -90,9 +90,9 @@ const Dashboard = () => {
         // Fetch user data from your API endpoint
         const fetchData = async () => {
             try {
-                const response = await fetch('http://localhost:3001/users');
+                const response = await fetch('https://api.myjson.online/v1/records/9efcc87a-4c37-467c-89f4-2608667a9715');
                 const users = await response.json();
-                setUserData(users); // Extract the "users" array from the response
+                setUserData(users.data.users); 
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
